@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gym Registration Form</title>
+    <style>
+        body
+        {
+            background-color: white;
+             /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6M6xnubecSmBds1WtmZzNIZZsycbYf25iKg&usqp=CAU' );  */
+             background-repeat: no-repeat;
+              
+
+        }
+        
+     .navbar
+        {
+            background-color: gray;
+            width: 100%;
+            height: 50px;
+            border-radius: 13px;
+            position: fixed;
+           /* padding: 5px 5px; */
+            
+            
+            
+            
+        }
+        .submit {
+            text-align: center;
+            margin-right: 50px;
+        }
+        .navbar li
+        {
+            
+            float: left;
+             list-style: none; /*for making the removal of bullets */
+             padding:0px;
+             margin: 1px 20px;
+             color: rgb(90, 14, 14);
+             
+        }
+        .navbar li a{
+            padding: 1px 1px;
+            text-decoration: none;/*use for removal of the underline*/
+            color: rgb(rgb(129, 18, 18), green, blue);
+            /* margin-top:4%; */
+
+        }
+        /* .navbar input
+        {
+            border: 2px solid black;
+            border-radius: 4px;
+            padding: 2px;
+            margin-right: 3px 4px;
+        } */
+    a:hover
+        {
+            background-color: purple;
+            color: rgb(32, 3, 8);
+        }
+        .search
+        { float: right;
+            color: bisque;
+      
+          padding: 12px 75px;
+
+         
+    
+        }
+       .form
+       {
+        background-color:white
+        padding: 5px;
+        margin:0px 2px;
+        width: 100%;
+        height: 100%;
+       }
+       fieldset
+       {
+        width: 100%;
+        height: 100%;
+        margin: 15px 2px;
+       }
+       h2{
+        text-align: center;
+        color: rgb(rgb(156, 32, 32), green, blue);
+        margin: 40px;
+
+       }
+       .personal
+       {
+        padding: 10px 40px ;
+        margin-top: 20px ;
+
+       }
+
+       .contact
+       {
+       
+        padding: 10px 40px ;
+      margin-top:  20px;
+       }
+       .membership
+       {
+        padding: 10px 40px ;
+      margin-top:  20px;
+
+       }
+       
+
+    </style>
+</head>
+<body>
+    <!-- <h1>Gym Registration Form</h1> -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li  ><a href="home.html"> Home</a></li>
+                <li ><a href="about.html">About</a></li>
+                
+                <li ><a href="#">Contact us</a>
+                <li > <a href="registration.html">Registration</a></li>
+                </li>
+                <li ><a href="#">Services</a></li>
+                <!-- <div class="search">
+                    <input type="text" name="search" id="search" placeholder="search this website">
+                
+                  
+                </div> -->
+            </ul>
+
+        </nav>
+        
+    </header>
+    <div class="form">
+    <form action="submit_registration.php" method="POST">
+        <fieldset class="personal">
+            <!-- <legend>Personal Information</legend> -->
+            <h2>Personal Information</h2>
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name"
+            name="full_name" placeholder="enter the name" required><br><br>
+
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset class="contact">
+            <h2>Contact Information</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea><br><br>
+        </fieldset>
+
+        <fieldset class="membership">
+           <h2>Membership Preferences</h2>
+            <label for="membership_type">Membership Type:</label>
+            <select id="membership_type" name="membership_type">
+                <option value="basic">Basic</option>
+                <option value="premium">Premium</option>
+                <option value="vip">VIP</option>
+            </select><br><br>
+
+            <label for="payment_method">Payment Method:</label>
+            <input type="radio" id="credit_card" name="payment_method" value="credit_card" required>
+            <label for="credit_card">Credit Card</label>
+            <input type="radio" id="paypal" name="payment_method" value="paypal" required>
+            <label for="paypal">PayPal</label><br><br>
+
+            <label for="agree_terms">
+                <input type="checkbox" id="agree_terms" name="agree_terms" required>
+                I agree to the terms and conditions
+            </label><br><br>
+        </fieldset>
+<p class="submit"></p> <input type="submit" value="Submit"></p>
+       
+    </form>
+</div>
+</body>
+</html>

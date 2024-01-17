@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css variable and properties</title>
+    <style>
+        /* root is use for the global variable declaration */
+        :root{
+            --box-color:red;
+        }
+        .box
+        {
+            /* here variable is declare in this box only for this box  */
+            /* --box-color:red; */
+            width:300px;
+            border:2px solid black;
+            margin:5px;
+            height: 150px;
+            background-color: var(--box-color);
+            box-shadow:3px 4px var(--box-color);
+        }
+        .container
+        {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

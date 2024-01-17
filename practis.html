@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>eCommerce Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>My eCommerce Store</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#" id="cartLink">Cart</a></li>
+        <li><a href="#" id="loginLink">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="products">
+      <!-- Product Cards -->
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h2>Product 1</h2>
+        <p>Description of Product 1</p>
+        <p>$99.99</p>
+        <button onclick="addToCart('Product 1', 99.99)">Add to Cart</button>
+      </div>
+      <!-- More Product Cards -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My eCommerce Store</p>
+  </footer>
+
+  <script>
+    // Function to add items to the cart
+    function addToCart(productName, price) {
+      // Example: Adding to a cart stored in localStorage
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const item = { name: productName, price: price };
+      cart.push(item);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert('Item added to cart!');
+    }
+
+    // Example: Handling cart link click
+    const cartLink = document.getElementById('cartLink');
+    cartLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      // Implement logic to show the cart contents or navigate to the cart page
+      // For instance: window.location.href = '/cart';
+    });
+
+    // Similarly, you can add logic for user login, manage the cart, etc.
+  </script>
+</body>
+</html>

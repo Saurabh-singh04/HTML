@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility_z-index</title>
+    <style>
+        .box
+        {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+        }
+        #box1
+        {
+            background-color: blue;
+        }
+        #box2
+        {  /* it makes no space */
+            /* display: none; */
+          
+             /* visibility:hidden;use to hide the things but with the space taken */
+            background-color: rgb(100, 30, 92);
+            position: relative;
+            top:55px;
+            z-index: 333;
+        }#box3
+        {
+            /* z index will not work on static positon */
+            position: relative;
+            top:42px;
+            background-color: rgb(6, 4, 121);
+            /* z-index: 555;whose is greater that goes to top */
+        }#box4
+        {
+            background-color: rgb(204, 191, 44);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <body>//div.box#box$*4 -->
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+
+</html>

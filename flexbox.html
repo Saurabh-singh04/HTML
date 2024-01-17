@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container
+        {
+            height:500px;
+            width:100%;
+border: 2px solid black;
+/* flex is use to allign in same line */
+display: flex;
+/* flex properties for flex container */
+/* direction property
+flex-direction: row;//default is row direction
+flex-direction: column;
+flex-direction: row-reverse;
+flex-direction: column-reverse; */
+
+flex-wrap: wrap;
+/* flex-wrap: wrap-reverse; */
+
+/* short cut for both wrap and direction
+flex-flow:  row-reverse wrap; */
+
+
+/* justify is use for horizontal */
+/* center is use for the center the element  */
+/* justify-content: center; */
+
+
+/* between the box equal no space between the start and end */
+/* justify-content: space-between; */
+
+/* equal between start and end */
+/* justify-content: space-evenly; */
+
+/* some extra space left and right side of the box */
+/* justify-content: space-around; */
+
+
+/* allign is use for vertically*/
+/* use to allign in center vertically */
+/* align-items: center;
+align-items: flex-end; */
+        }
+        .item
+        {
+            width: 50px;
+            height: 150px;
+            
+        background-color: tomato;
+       
+    border: 2px solid rgb(25, 0, 255);
+    margin: 10px;
+    padding: 3px;
+  
+    
+    }
+    #item1{
+        /* flex properties for flex */
+      
+        /* whose order is greater that appear at last */
+   /* order: 40; */
+
+   flex-grow: 3;
+
+   flex-shrink: 5;
+    }
+    #item2{
+align-self: start;
+        align-self: center;
+        align-self: flex-end;
+    }
+    #item3{
+        order: 4;
+        flex-basis: 30px;
+        /* when flex direction is set to row flex basis will control width */
+    }
+
+    </style>
+</head>
+<body>
+    <h1>this is flexbox</h1>
+    <div class="container">
+        <div class="item" id="item1">First box</div>
+        <div class="item" id="item2">second box</div>
+        <div class="item" id="item3">third box</div>
+       
+    </div>
+</body>
+</html>

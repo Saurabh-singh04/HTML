@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar in Header</title>
+    <style>
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative; /* Add relative positioning to the header */
+        }
+
+        .search-box {
+            position: absolute; /* Position the search box absolutely */
+            top: 10px; /* Adjust top and right values to position it */
+            right: 10px;
+        }
+
+        .search-input {
+            padding: 5px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        /* Style the search button as needed */
+        .search-button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+    </header>
+
+    <!-- Rest of your webpage content goes here -->
+</body>
+</html>
